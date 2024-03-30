@@ -1,0 +1,384 @@
+{% extends "base.html" %} {% block title %}New PRO Survey{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <h2 align="center">PRO Survey</h2>
+    <h4>Part 1: Health-Related Social Support</h4>
+    
+    <b>1. What is your living situation today?</b>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="hrsnQ11" name="hrsnQ1" class="custom-control-input" value="0">
+      <label class="custom-control-label" for="hrsnQ11">
+          I have a steady place to live.
+      </label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="hrsnQ12" name="hrsnQ1" class="custom-control-input" value="1">
+      <label class="custom-control-label" for="hrsnQ12">
+          I have a place to live today, but <b>I am worried</b> about losing it in the future.
+      </label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="hrsnQ13" name="hrsnQ1" class="custom-control-input" value="1">
+      <label class="custom-control-label" for="hrsnQ13">
+          I do not have a steady place to live 
+          (I am temporarily staying with others, in a hotel, in shelter, 
+          living outside on the street, on a beach, in a car, abandoned building, 
+          bus or train station, or in a park).
+      </label>
+    </div>
+    <div class="custom-control custom-radio">
+       <input type="radio" id="hrsnQ14" name="hrsnQ1" class="custom-control-input" value="-1">
+       <label class="custom-control-label" for="hrsnQ14">
+           I prefer not to answer.
+       </label>
+    </div>
+    
+    
+    <p></p>
+    <b>2. Think about the place you live. Do you have problems with any of the following?</b>
+    <br>CHOOSE ALL THAT APPLY</br>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" id="hrsnQ21" name="hrsnQ2" class="custom-control-input" value="1">
+      <label class="custom-control-label" for="hrsnQ21">
+          Pests such as bugs, ants, or mice
+      </label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" id="hrsnQ22" name="hrsnQ2" class="custom-control-input" value="1">
+      <label class="custom-control-label" for="hrsnQ22">
+          Mold
+      </label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" id="hrsnQ23" name="hrsnQ2" class="custom-control-input" value="1">
+      <label class="custom-control-label" for="hrsnQ23">
+          Lead paint or pipes
+      </label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" id="hrsnQ24" name="hrsnQ2" class="custom-control-input" value="1">
+      <label class="custom-control-label" for="hrsnQ24">
+          Lack of heat
+      </label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" id="hrsnQ25" name="hrsnQ2" class="custom-control-input" value="1">
+      <label class="custom-control-label" for="hrsnQ25">
+          Oven or stove not working
+      </label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" id="hrsnQ26" name="hrsnQ2" class="custom-control-input" value="1">
+      <label class="custom-control-label" for="hrsnQ26">
+          Smoke detectors missing or not working
+      </label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" id="hrsnQ27" name="hrsnQ2" class="custom-control-input" value="1">
+      <label class="custom-control-label" for="hrsnQ27">
+          Water leaks
+      </label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" id="hrsnQ28" name="hrsnQ2" class="custom-control-input" value="0">
+      <label class="custom-control-label" for="hrsnQ28">
+          None of the above
+      </label>
+    </div>
+    
+    
+    <p></p>
+    <b>3. Please answer whether the statement below was OFTEN, SOMETIMES, or NEVER true for 
+    you and your household: 
+    <br> <i>"Within the past 12 months, the food you bought just didn't last and you didn't have money 
+    to get more."</i></b>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="hrsnQ31" name="hrsnQ3" class="custom-control-input" value="2">
+      <label class="custom-control-label" for="hrsnQ31">
+          Often true.
+      </label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="hrsnQ32" name="hrsnQ3" class="custom-control-input" value="1">
+      <label class="custom-control-label" for="hrsnQ32">
+          Sometimes true.
+      </label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="hrsnQ33" name="hrsnQ3" class="custom-control-input" value="0">
+      <label class="custom-control-label" for="hrsnQ33">
+          Never true.
+      </label>
+    </div>
+    <div class="custom-control custom-radio">
+       <input type="radio" id="hrsnQ34" name="hrsnQ3" class="custom-control-input" value="-1">
+       <label class="custom-control-label" for="hrsnQ34">
+           I prefer not to answer.
+       </label>
+    </div>
+    
+    
+    <p></p>
+    <b>4. In the past 12 months, has lack of reliable transportation kept you from 
+    medical appointments, meetings, work or from getting things needed for daily living?</b>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="hrsnQ41" name="hrsnQ4" class="custom-control-input" value="1">
+      <label class="custom-control-label" for="hrsnQ41">
+          Yes.
+      </label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="hrsnQ42" name="hrsnQ4" class="custom-control-input" value="0">
+      <label class="custom-control-label" for="hrsnQ42">
+          No.
+      </label>
+    </div>
+    <div class="custom-control custom-radio">
+       <input type="radio" id="hrsnQ43" name="hrsnQ4" class="custom-control-input" value="-1">
+       <label class="custom-control-label" for="hrsnQ43">
+           I prefer not to answer.
+       </label>
+    </div>
+    
+    
+    <p></p>
+    <b>5. How hard is it for you to pay for the very basics like food, housing, 
+    medical care, and heating? Would you say it is</b>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="hrsnQ51" name="hrsnQ5" class="custom-control-input" value="2">
+      <label class="custom-control-label" for="hrsnQ51">
+          Very hard.
+      </label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="hrsnQ52" name="hrsnQ5" class="custom-control-input" value="1">
+      <label class="custom-control-label" for="hrsnQ52">
+          Somewhat hard.
+      </label>
+    </div>
+    <div class="custom-control custom-radio">
+       <input type="radio" id="hrsnQ53" name="hrsnQ5" class="custom-control-input" value="0">
+       <label class="custom-control-label" for="hrsnQ53">
+           Not hard at all.
+       </label>
+    </div>
+    <div class="custom-control custom-radio">
+       <input type="radio" id="hrsnQ54" name="hrsnQ5" class="custom-control-input" value="-1">
+       <label class="custom-control-label" for="hrsnQ54">
+           I prefer not to answer.
+       </label>
+    </div>
+    
+    
+    <p></p>
+    <b>6. If for any reason you need help with day-to-day activities such as 
+    bathing, preparing meals, shopping, managing finances, etc., do you get 
+    the help you need?</b>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="hrsnQ61" name="hrsnQ6" class="custom-control-input" value="0">
+      <label class="custom-control-label" for="hrsnQ61">
+          I don’t need any help.
+      </label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="hrsnQ62" name="hrsnQ6" class="custom-control-input" value="0">
+      <label class="custom-control-label" for="hrsnQ62">
+          I get all the help I need.
+      </label>
+    </div>
+    <div class="custom-control custom-radio">
+       <input type="radio" id="hrsnQ63" name="hrsnQ6" class="custom-control-input" value="1">
+       <label class="custom-control-label" for="hrsnQ63">
+           I could use a little more help.
+       </label>
+    </div>
+    <div class="custom-control custom-radio">
+       <input type="radio" id="hrsnQ64" name="hrsnQ6" class="custom-control-input" value="2">
+       <label class="custom-control-label" for="hrsnQ64">
+           I need a lot more help.
+       </label>
+    </div>
+    
+    
+    <br></br>
+    <h4>Part 2: Medications and Treatments</h4>
+    <div class="row">
+        <div class="col-6 align-self-center">
+            <b>CURRENT</b> level of confidence…
+        </div>
+         <div class="col-1 align-self-end">
+             I am <br>
+             not at all confident
+         </div>
+         <div class="col-1 align-self-end">
+             I am <br>
+             a little confident
+         </div>
+         <div class="col-1 align-self-end">
+             I am <br> 
+             somewhat confident
+         </div>
+         <div class="col-1 align-self-end">
+             I am <br> 
+             quite confident
+         </div>
+         <div class="col-1 align-self-end">
+             I am <br>
+             very confident
+         </div>
+    </div>
+    <div class="row" style="background-color:#d5e9e4">
+        <div class="col-6">
+            7. I can follow directions when my doctor changes my medications.
+        </div>
+        <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ11" name="medQ1" class="custom-control-input" value="1">
+               <label class="custom-control-label" for="medQ11">1</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ12" name="medQ1" class="custom-control-input" value="2">
+               <label class="custom-control-label" for="medQ12">2</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ13" name="medQ1" class="custom-control-input" value="3">
+               <label class="custom-control-label" for="medQ13">3</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ14" name="medQ1" class="custom-control-input" value="4">
+               <label class="custom-control-label" for="medQ14">4</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ15" name="medQ1" class="custom-control-input" value="5">
+               <label class="custom-control-label" for="medQ15">5</label>
+             </div>
+         </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            8. I can take my medication when there is a change in my usual day 
+            (unexpected things happen).
+        </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ21" name="medQ2" class="custom-control-input" value="1">
+               <label class="custom-control-label" for="medQ21">1</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ22" name="medQ2" class="custom-control-input" value="2">
+               <label class="custom-control-label" for="medQ22">2</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ23" name="medQ2" class="custom-control-input" value="3">
+               <label class="custom-control-label" for="medQ23">3</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ24" name="medQ2" class="custom-control-input" value="4">
+               <label class="custom-control-label" for="medQ24">4</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ25" name="medQ2" class="custom-control-input" value="5">
+               <label class="custom-control-label" for="medQ25">5</label>
+             </div>
+         </div>
+    </div>
+    <div class="row" style="background-color:#d5e9e4">
+        <div class="col-6">
+            9. I can manage my medication without help.
+        </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ31" name="medQ3" class="custom-control-input" value="1">
+               <label class="custom-control-label" for="medQ31">1</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ32" name="medQ3" class="custom-control-input" value="2">
+               <label class="custom-control-label" for="medQ32">2</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ33" name="medQ3" class="custom-control-input" value="3">
+               <label class="custom-control-label" for="medQ33">3</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ34" name="medQ3" class="custom-control-input" value="4">
+               <label class="custom-control-label" for="medQ34">4</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ35" name="medQ3" class="custom-control-input" value="5">
+               <label class="custom-control-label" for="medQ35">5</label>
+             </div>
+         </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            10. I can list my medications, including the doses and schedule.
+        </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ41" name="medQ4" class="custom-control-input" value="1">
+               <label class="custom-control-label" for="medQ41">1</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ42" name="medQ4" class="custom-control-input" value="2">
+               <label class="custom-control-label" for="medQ42">2</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ43" name="medQ4" class="custom-control-input" value="3">
+               <label class="custom-control-label" for="medQ43">3</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ44" name="medQ4" class="custom-control-input" value="4">
+               <label class="custom-control-label" for="medQ44">4</label>
+             </div>
+         </div>
+         <div class="col-1">
+             <div class="custom-control custom-radio">
+               <input type="radio" id="medQ45" name="medQ4" class="custom-control-input" value="5">
+               <label class="custom-control-label" for="medQ45">5</label>
+             </div>
+         </div>
+    </div>
+    <br></br>
+    <div class="row">
+        <div class="col">
+            <center><button type="submit" class="btn btn-primary">Submit</button></center>
+        </div>
+        <div class="col">
+            <center><a class="btn btn-primary" href="/" role="button">Cancel</a></center>
+        </div>
+    </div>
+    <br></br>
+</form>
+
+{% endblock %}
