@@ -4,4 +4,20 @@
 <h2>Hi, {{user.first_name}}!</h2>
 <br></br>
 <a class="btn btn-primary" href="/prosurvey" role="button">Submit a New PRO Survey</a>
+<p> Last PRO update: 
+{% if not last_update %}
+    No previous submissions.
+{% else %}
+    {{last_update}}
+{% endif %}
+</p>
+<br></br>
+<h4>Current Medications</h4>
+{% if not med_list %}
+<p>None.</p>
+{% else %}
+<ul>
+    {% for m in med_list %}<li>{{m}}</li>{% endfor %}
+</ul> 
+{% endif %}
 {% endblock %}

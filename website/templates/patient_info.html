@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block title %}Patient Detail{% endblock %}
+
+{% block content %}
+<a class="btn btn-primary" href="/" role="button">Back to Patient List</a>
+<p> </p>
+<h4>Patient Information</h4> 
+<p><b>First Name:</b> {{ patient_data['info'].first_name }}</p>
+<p><b>Last Name:</b> {{ patient_data['info'].last_name }}</p>
+<p><b>PID:</b> {{ patient_data['info'].pid }}</p>
+<p> </p>
+<h4>Current Medications</h4>
+{% if not patient_data['medications'] %}
+<p>None.</p>
+{% else %}
+<ul>
+    {% for m in patient_data['medications'] %}<li>{{m}}</li>{% endfor %}
+</ul> 
+{% endif %}
+<p> </p>
+<h4>PRO within 180 Days</h4>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">PRO Date</th>
+        <th scope="col">Social Needs</th>
+        <th scope="col">Self-Efficacy</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for pro in patient_data['pro']: %}
+    <tr>
+        <td scope="row">{{pro.date}}</td>
+        <td>
+            {% for sn in [pro.sn1, pro.sn2, pro.sn3, pro.sn4, pro.sn5]: %}
+                {% if sn %}{{sn}} {% endif %}
+            {% endfor %}
+        </td>
+        <td>{{pro.med}}%</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<p> </p>
+<a class="btn btn-primary" href="/" role="button">Back to Patient List</a>
+{% endblock %}
